@@ -100,20 +100,22 @@ public class Calculate {
 		}
 	}
 	//a call to min returns the smaller of the values passed, accepts two integers and returns an int.
-	public static int min(int number1, int number2) {
-		if (number1 <=number2) {
+	public static double min(double number1, double number2) {
+		if (number1<=number2) {
 			return number1;
 		} else {
 			return number2;
 		}
 	}
 	//a call to round2 rounds a double correctly to 2 decimal places and returns a double
-	//DOESNT WORK WITH NEG NUMBERS PLS USE IF/ELSE STATEMENTS
 	public static double round2(double decimal) {
-		double number;
-		number = absValue(decimal);
-		number = number*100;
-		number = number+0.5;
+		double number=decimal;
+		number = number *100;
+		if (decimal>0) {
+			number = number+0.5;
+		} else {  
+		number = number-0.5;
+		}
 		number = (int)number;
 		number =  number/100;
 		return number;
@@ -167,4 +169,16 @@ public class Calculate {
 		return round2(output);
 	}
 	//uses coefficients of a quadratic equation in standard form, uses quadratic formula to approximate real roots, accepts three integers, returns a String
+	public static String quadForm( int a, int b, int c) {
+		double discriminant = toDiscriminant(a, b, c);
+		if(discriminant < 0){
+			return "no real roots";
+		} else if(discriminant == 0){
+			return round2(-b/2*a) + "";
+		} else {
+			double root1 = round2((-b+sqrt(discriminant))/(2.0*a));
+			double root2 = round2((-b-sqrt(discriminant))/(2.0*a));
+			return min(root1,root2) + " and " + max(root1,root2);
+		}
+	}
 }

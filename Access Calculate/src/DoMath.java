@@ -22,12 +22,13 @@ public class DoMath {
 		System.out.println(Calculate.max(4,6));
 		System.out.println(Calculate.max(4,5,9));
 		System.out.println(Calculate.min(3,7));
-		System.out.println(Calculate.round2(-38.278));
 		System.out.println(Calculate.exponent(2,2));
 		System.out.println(Calculate.factorial(3));
 		System.out.println(Calculate.isPrime(7));
 		System.out.println(Calculate.gcf(3,9));
 		System.out.println(Calculate.sqrt(4));
+		System.out.println(Calculate.round2(-38.278));
+		System.out.println(Calculate.quadForm(3,4,5));
 
 	}
 
