@@ -29,7 +29,7 @@ public class Calculate {
 		return answer;
 	}
 	//a call to toDegrees converts an angle measure given in radians into degrees
-	public static double toDegree(double number) {
+	public static double toDegrees(double number) {
 		double answer=0;
 		answer = (number*(180/3.14159));
 		return answer;
@@ -41,7 +41,7 @@ public class Calculate {
 		return answer;
 	}
 	//a call to discriminant provides the coefficients of a quadratic equation in standard form (a, b, and c) and returns the value of the discriminant
-	public static double toDiscriminant(double number1, double number2, double number3) {
+	public static double discriminant(double number1, double number2, double number3) {
 		double answer=0;
 		answer = ((number2*number2)+(-4*number1*number3));
 		return answer;
@@ -100,7 +100,7 @@ public class Calculate {
 		}
 	}
 	//a call to min returns the smaller of the values passed, accepts two integers and returns an int.
-	public static double min(double number1, double number2) {
+	public static int min(int number1, int number2) {
 		if (number1<=number2) {
 			return number1;
 		} else {
