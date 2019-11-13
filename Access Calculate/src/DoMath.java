@@ -11,8 +11,8 @@ public class DoMath {
 		System.out.println(Calculate.cube(-12));
 		System.out.println(Calculate.average(3,4));
 		System.out.println(Calculate.average(5,4,3));
-		System.out.println(Calculate.toDegrees(3));
-		System.out.println(Calculate.toRadian(180));
+		System.out.println(Calculate.toDegrees(2));
+		System.out.println(Calculate.toRadians(180));
 		System.out.println(Calculate.discriminant(3,2,1));
 		System.out.println(Calculate.toImproperFrac(3,5,4));
 		System.out.println(Calculate.toMixedNum(9,2));
